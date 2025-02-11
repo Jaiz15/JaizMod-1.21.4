@@ -16,7 +16,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "jaizmod:ancient_sprout",
+          "name": "jaizmod:ancient_sprout_seeds",
           "weight": 1
         },
         {
@@ -26,7 +26,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "jaizmod:blooming_ivy",
+          "name": "jaizmod:blooming_ivy_seeds",
           "weight": 1
         }
       ],

@@ -1,6 +1,7 @@
 package jaiz.jaizmod.block.custom;
 
 import jaiz.jaizmod.block.ModBlocks;
+import jaiz.jaizmod.util.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.PillarBlock;
@@ -38,7 +39,7 @@ public class RottingLog extends PillarBlock {
         if (blockState.isIn(BlockTags.LOGS)) {
             world.setBlockState(blockPos, blockState2);
         }
-        if (blockState.isIn(BlockTags.LEAVES)) {
+        if (blockState.isIn(ModTags.Blocks.ROTTABLE_LEAVES)) {
             world.setBlockState(blockPos, blockState3);
         }
         }

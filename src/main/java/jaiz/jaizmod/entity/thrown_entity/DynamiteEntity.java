@@ -26,22 +26,11 @@ public class DynamiteEntity extends ThrownItemEntity {
         super(ModEntities.DYNAMITE, x, y, z, world, stack);
     }
 
-
     public int k = 120;
-
-
 
     @Override
     protected Item getDefaultItem() {
         return ModItems.DYNAMITE;
-    }
-
-    @Override
-    protected void onEntityHit(EntityHitResult entityHitResult) {
-        Entity entity = entityHitResult.getEntity();
-        this.explode();
-        entity.serverDamage(entity.getDamageSources().explosion(this, this.getOwner()), 12.0F);
-        super.onEntityHit(entityHitResult);
     }
 
     private void explode() {

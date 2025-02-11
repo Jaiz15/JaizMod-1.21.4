@@ -109,7 +109,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.LEAVES)
                 .add(ModBlocks.DESERT_OAK_LEAVES)
+                .add(ModBlocks.DRIED_LEAVES)
+                .add(ModBlocks.DEAD_LEAVES)
                 .add(ModBlocks.MAHOGANY_LEAVES);
+
 
         getOrCreateTagBuilder(BlockTags.WOODEN_SLABS)
                 .add(ModBlocks.DESERT_OAK_SLAB)

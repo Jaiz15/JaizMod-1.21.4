@@ -11,6 +11,9 @@ import net.minecraft.world.biome.Biome;
 public class ModTags {
     public static class Blocks {
 
+        public static final TagKey<Block> ROTTABLE_LEAVES =
+                createTag("rottable_leaves");
+
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(JaizMod.MOD_ID, name));
         }

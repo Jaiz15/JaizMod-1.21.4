@@ -42,11 +42,38 @@ public class ModBlocks {
     public static final BooleanProperty LOCKED = BooleanProperty.of("locked");
     public static final BooleanProperty GROWING = BooleanProperty.of("growing");
 
+
     public static final Block PLATED_CALCITE = registerBlock("plated_calcite",
             Block::new,AbstractBlock.Settings.copy(Blocks.CALCITE));
 
     public static final Block ANCIENT_SPROUT = registerBlock("ancient_sprout",
-            settings -> new AncientSproutBlock(StatusEffects.ABSORPTION, 60, settings),AbstractBlock.Settings.create().mapColor(MapColor.DARK_GREEN).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).offset(AbstractBlock.OffsetType.XZ).pistonBehavior(PistonBehavior.DESTROY));
+            settings -> new AncientSproutBlock(StatusEffects.ABSORPTION, 60, settings),
+            AbstractBlock.Settings.create().mapColor(MapColor.DARK_GREEN).noCollision().breakInstantly()
+                    .sounds(BlockSoundGroup.GRASS).offset(AbstractBlock.OffsetType.XZ)
+                    .pistonBehavior(PistonBehavior.DESTROY));
+
+    public static final Block BLOOMING_IVY_CROP = registerBlock(
+            "blooming_ivy_crop",
+            CropBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DARK_GREEN)
+                    .noCollision()
+                    .ticksRandomly()
+                    .breakInstantly()
+                    .sounds(BlockSoundGroup.CROP)
+                    .pistonBehavior(PistonBehavior.DESTROY)
+    );
+    public static final Block ANCIENT_SPROUT_CROP = registerBlock(
+            "ancient_sprout_crop",
+            CropBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.GREEN)
+                    .noCollision()
+                    .ticksRandomly()
+                    .breakInstantly()
+                    .sounds(BlockSoundGroup.CROP)
+                    .pistonBehavior(PistonBehavior.DESTROY)
+    );
 
 
     public static final Block SNIFFER_WOOL = registerBlock("sniffer_wool",
@@ -294,13 +321,22 @@ public class ModBlocks {
                     .solidBlock(Blocks::never)
     );
 
-
-
-
-
-    public static final Block BLOOMING_IVY_BLOCK = registerBlock("blooming_ivy_block", LeavesBlock::new, createLeavesSettings(BlockSoundGroup.GRASS));
-
-
+    public static final Block BLOOMING_IVY_BLOCK = registerBlock(
+            "blooming_ivy_block",
+            settings -> new DriedLeavesBlock(50, JaizMod.BLOOMING_IVY_PARTICLE, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TEAL)
+                    .strength(0.2F)
+                    .ticksRandomly()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::canSpawnOnLeaves)
+                    .suffocates(Blocks::never)
+                    .blockVision(Blocks::never)
+                    .burnable()
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .solidBlock(Blocks::never)
+    );
 
     public static final Block DESERT_OAK_LEAVES = registerBlock("desert_oak_leaves", LeavesBlock::new, createLeavesSettings(BlockSoundGroup.GRASS));
     public static final Block MAHOGANY_LEAVES = registerBlock("mahogany_leaves", LeavesBlock::new, createLeavesSettings(BlockSoundGroup.GRASS));
@@ -364,8 +400,16 @@ public class ModBlocks {
             Optional.of(ModConfiguredFeatures.MAHOGANY_TREE),
             Optional.of(ModConfiguredFeatures.SMALL_MAHOGANY_TREE),
             Optional.empty());
+    public static final SaplingGenerator AUTUMN = new SaplingGenerator("autumn_tree",
+            Optional.empty(),
+            Optional.of(ModConfiguredFeatures.AUTUMN_TREE),
+            Optional.empty());
+
     public static final Block MAHOGANY_SAPLING = registerBlock("mahogany_sapling",
             settings -> new SaplingBlock(MAHOGANY, settings),AbstractBlock.Settings.copy(Blocks.OAK_SAPLING));
+
+    public static final Block AUTUMN_SAPLING = registerBlock("autumn_sapling",
+            settings -> new SaplingBlock(AUTUMN, settings),AbstractBlock.Settings.copy(Blocks.OAK_SAPLING));
 
     public static final Block FIREFLY_BOTTLE = registerBlock("firefly_bottle",
             FireflyBottleBlock::new,AbstractBlock.Settings.copy(Blocks.GLASS).sounds(BlockSoundGroup.GLASS).luminance(state -> 15));

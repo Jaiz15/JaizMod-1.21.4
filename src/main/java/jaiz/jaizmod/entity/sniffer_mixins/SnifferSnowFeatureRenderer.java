@@ -16,7 +16,8 @@ public class SnifferSnowFeatureRenderer extends FeatureRenderer<SnifferEntityRen
     private static final Identifier SNOW_TEXTURE = Identifier.ofVanilla("textures/entity/sniffer/snow.png");
 
     @Override
-    public void render(MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, SnifferEntityRenderState state, float limbAngle, float limbDistance) {
+    public void render(MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light,
+                       SnifferEntityRenderState state, float limbAngle, float limbDistance) {
         if (!state.invisible) {
             if (((SnifferRenderStateMixinAccessor)state).getSnowy()) {
                 renderModel(this.getContextModel(), SNOW_TEXTURE, matrices, vertexConsumers, light, state, -1);

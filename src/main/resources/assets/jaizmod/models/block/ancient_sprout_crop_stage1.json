@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "jaizmod:block/ancient_sprout_stage_1"
+  }
+}

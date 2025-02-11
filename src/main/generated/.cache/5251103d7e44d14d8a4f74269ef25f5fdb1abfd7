@@ -4,7 +4,7 @@
 d428dfdffc687de441350d7a1218075187783feb data/minecraft/tags/block/dirt.json
 c51642706a93ff5f7642d069d8a9a3e2057c96c3 data/minecraft/tags/block/fence_gates.json
 94cd60f59b1286d0ea9c3ba9383e0f735ece94bc data/minecraft/tags/block/fences.json
-030e852604d55bc74bebfda15dc2df242f7a28af data/minecraft/tags/block/leaves.json
+bbae257e0ed95924e2fee0f2141e71c89af58bff data/minecraft/tags/block/leaves.json
 40e03ca89db6ee2f631745aa4f61b2e8a4d9c16e data/minecraft/tags/block/logs_that_burn.json
 196e8d1e9372eda13b5fd9a5a6204bd5e0d2e5d4 data/minecraft/tags/block/mineable/axe.json
 c3b00a4c3f77858475c8ec543853101d4e1d5b66 data/minecraft/tags/block/mineable/hoe.json

@@ -13,6 +13,7 @@ import jaiz.jaizmod.item.custom.GlowingSpyGlassItem;
 import jaiz.jaizmod.item.custom.teas.*;
 import jaiz.jaizmod.sound.ModSounds;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.DispenserBlock;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.NbtComponent;
@@ -197,6 +198,13 @@ public class ModItems {
     public static final Item DESERT_OAK_SIGN = registerItem("desert_oak_sign", settings -> new SignItem(ModBlocks.STANDING_DESERT_OAK_SIGN, ModBlocks.WALL_DESERT_OAK_SIGN, settings), new Item.Settings().maxCount(16).useBlockPrefixedTranslationKey());
     public static final Item DESERT_OAK_HANGING_SIGN = registerItem("desert_oak_hanging_sign", settings -> new HangingSignItem(ModBlocks.HANGING_DESERT_OAK_SIGN, ModBlocks.WALL_HANGING_DESERT_OAK_SIGN, settings), new Item.Settings().maxCount(16).useBlockPrefixedTranslationKey());
 
+
+    private static Function<Item.Settings, Item> createBlockItemWithUniqueName(Block block) {
+        return settings -> new BlockItem(block, settings.useItemPrefixedTranslationKey());
+    }
+    public static final Item BLOOMING_IVY_SEEDS = registerItem("blooming_ivy_seeds", createBlockItemWithUniqueName(ModBlocks.BLOOMING_IVY_CROP));
+    public static final Item ANCIENT_SPROUT_SEEDS = registerItem("ancient_sprout_seeds", createBlockItemWithUniqueName(ModBlocks.ANCIENT_SPROUT_CROP));
+
     //BlockItems
 
     public static BlockItem PLATED_CALCITE = registerBlockItem("plated_calcite", ModBlocks.PLATED_CALCITE);
@@ -310,6 +318,8 @@ public class ModItems {
     public static final Item UNDERGROWTH = registerBlockItem("undergrowth", ModBlocks.UNDERGROWTH);
 
     public static final Item BLOOMING_IVY = registerBlockItem("blooming_ivy", ModBlocks.BLOOMING_IVY);
+
+    public static final Item AUTUMN_SAPLING = registerBlockItem("autumn_sapling", ModBlocks.AUTUMN_SAPLING);
 
     public static final Item MAHOGANY_PLANKS = registerBlockItem("mahogany_planks", ModBlocks.MAHOGANY_PLANKS);
     public static final Item MAHOGANY_STAIRS = registerBlockItem("mahogany_stairs", ModBlocks.MAHOGANY_STAIRS);

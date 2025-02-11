@@ -4,8 +4,13 @@ import jaiz.jaizmod.block.ModBlocks;
 import jaiz.jaizmod.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.block.BeetrootsBlock;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.CropBlock;
 import net.minecraft.item.Items;
+import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
+import net.minecraft.loot.condition.LootCondition;
+import net.minecraft.predicate.StatePredicate;
 import net.minecraft.registry.RegistryWrapper;
 
 import java.util.concurrent.CompletableFuture;
@@ -33,7 +38,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.STANDING_ROTTEN_SIGN);
         addDrop(ModBlocks.WALL_ROTTEN_SIGN);
 
-
+        addDrop(ModBlocks.AUTUMN_SAPLING);
         addDrop(ModBlocks.FANCY_WHITE_WOOL);
         addDrop(ModBlocks.FANCY_LIGHT_GRAY_WOOL);
         addDrop(ModBlocks.FANCY_GRAY_WOOL);
@@ -101,6 +106,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.CHISELED_PLATED_CALCITE);
         addDrop(ModBlocks.PLATED_CALCITE);
+        addDrop(ModBlocks.MAHOGANY_SAPLING);
 
         addDrop(ModBlocks.GUANO_PILE, ModItems.GUANO);
         this.addDrop(ModBlocks.SLIME_DRIP, block -> this.oreDrops(block, Items.SLIME_BALL));
@@ -114,7 +120,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.MAHOGANY_LEAVES, leavesDrops(ModBlocks.MAHOGANY_LEAVES, ModBlocks.MAHOGANY_SAPLING, 0.1f));
 
-        addDrop(ModBlocks.DRIED_LEAVES, leavesDrops(ModBlocks.DRIED_LEAVES, Blocks.DEAD_BUSH, 0.1f));
+        addDrop(ModBlocks.DRIED_LEAVES, leavesDrops(ModBlocks.DRIED_LEAVES, ModBlocks.AUTUMN_SAPLING, 0.1f));
         addDrop(ModBlocks.DEAD_LEAVES, leavesDrops(ModBlocks.DEAD_LEAVES, Blocks.DEAD_BUSH, 0.1f));
 
         addDrop(ModBlocks.SNIFFER_WOOL);
@@ -123,6 +129,14 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.COLUMBINE);
         addDrop(ModBlocks.BLOOMING_IVY);
         addDrop(ModBlocks.ANCIENT_SPROUT);
+        LootCondition.Builder ancient_sprout_builder = BlockStatePropertyLootCondition.builder(ModBlocks.ANCIENT_SPROUT_CROP)
+                .properties(StatePredicate.Builder.create().exactMatch(CropBlock.AGE, 7));
+        addDrop(ModBlocks.ANCIENT_SPROUT_CROP, cropDrops(ModBlocks.ANCIENT_SPROUT_CROP, ModItems.ANCIENT_SPROUT, ModItems.ANCIENT_SPROUT_SEEDS, ancient_sprout_builder));
+
+        LootCondition.Builder blooming_ivy_builder = BlockStatePropertyLootCondition.builder(ModBlocks.BLOOMING_IVY_CROP)
+                .properties(StatePredicate.Builder.create().exactMatch(CropBlock.AGE, 7));
+        addDrop(ModBlocks.BLOOMING_IVY_CROP, cropDrops(ModBlocks.BLOOMING_IVY_CROP, ModItems.BLOOMING_IVY, ModItems.BLOOMING_IVY_SEEDS, blooming_ivy_builder));
+
 
         addDrop(ModBlocks.ROTTEN_WOOD);
         addDrop(ModBlocks.STRIPPED_ROTTEN_WOOD);

@@ -49,6 +49,8 @@ public class JaizModClient implements ClientModInitializer {
 		TerraformBoatClientHelper.registerModelLayers(ModBoats.ROTTEN_BOAT_ID);
 		TerraformBoatClientHelper.registerModelLayers(ModBoats.DESERT_OAK_BOAT_ID);
 
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ANCIENT_SPROUT_CROP, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BLOOMING_IVY_CROP, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BLOOMING_IVY, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TEAPOTBLOCK, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FIREFLY_BOTTLE, RenderLayer.getCutout());
@@ -57,6 +59,7 @@ public class JaizModClient implements ClientModInitializer {
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.IVY, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.UNDERGROWTH, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.COCOON_BLOCK, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.AUTUMN_SAPLING, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(Blocks.SNOW, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SNIFFER_WOOL, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SNIFFER_CARPET, RenderLayer.getCutout());
@@ -135,6 +138,7 @@ public class JaizModClient implements ClientModInitializer {
 		ParticleFactoryRegistry.getInstance().register(JaizMod.FIREFLY_PARTICLE, FireFlyParticle.FireFlyParticleFactory::new);
 		ParticleFactoryRegistry.getInstance().register(JaizMod.SPROUT_PARTICLE, SproutParticle.SproutParticleFactory::new);
 		ParticleFactoryRegistry.getInstance().register(JaizMod.DRY_LEAF_PARTICLE, LeavesParticle.PaleOakLeavesFactory::new);
+		ParticleFactoryRegistry.getInstance().register(JaizMod.BLOOMING_IVY_PARTICLE, LeavesParticle.PaleOakLeavesFactory::new);
 		ParticleFactoryRegistry.getInstance().register(JaizMod.DEAD_LEAF_PARTICLE, LeavesParticle.PaleOakLeavesFactory::new);
 
 	}

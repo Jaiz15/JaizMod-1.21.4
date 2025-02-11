@@ -24,7 +24,7 @@
 		"homepage": "https://www.youtube.com/channel/UC5B7Z-cTk5peAeTRH9MTY2w",
 		"sources": "https://github.com/Jaiz15"
 	},
-	"license": "MIT",
+	"license": "ARR",
 	"icon": "assets/jaizmod/icon.png",
 	"environment": "*",
 	"entrypoints": {

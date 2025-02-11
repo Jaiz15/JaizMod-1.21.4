@@ -6,6 +6,7 @@ import jaiz.jaizmod.worldgen.biome.ModBiomes;
 import jaiz.jaizmod.worldgen.features.ModPlacedFeatures;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.entity.SpawnRestriction;
 import net.minecraft.entity.passive.AnimalEntity;
@@ -77,6 +78,11 @@ public class ModFeaturePlacer {
                 GenerationStep.Feature.TOP_LAYER_MODIFICATION, ModPlacedFeatures.PINK_FLORAL_PLACED);
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.OLD_GROWTH_BIRCH_FOREST, BiomeKeys.BIRCH_FOREST, BiomeKeys.FOREST, BiomeKeys.FLOWER_FOREST),
                 GenerationStep.Feature.TOP_LAYER_MODIFICATION, ModPlacedFeatures.YELLOW_FLORAL_PLACED);
+
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.OLD_GROWTH_BIRCH_FOREST, BiomeKeys.BIRCH_FOREST, BiomeKeys.FLOWER_FOREST),
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.AUTUMN_BIRCH_PLACED);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FOREST, BiomeKeys.FLOWER_FOREST),
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.AUTUMN_OAK_PLACED);
 
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.OLD_GROWTH_BIRCH_FOREST, BiomeKeys.BIRCH_FOREST),
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.BIRCH_LOG_MOSS);
@@ -174,6 +180,9 @@ public class ModFeaturePlacer {
                 ModEntities.SNAIL, 2, 1, 2);
         BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.MANGROVE_SWAMP), SpawnGroup.CREATURE,
                 ModEntities.SNAIL, 2, 1, 2);
+
+        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST), SpawnGroup.CREATURE,
+                EntityType.WOLF, 8, 2, 4);
 
 
         // Spawn Restrictors

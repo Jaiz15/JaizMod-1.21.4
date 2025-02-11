@@ -13,6 +13,8 @@ public class ModConfiguredFeatures {
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> DESERT_OAK_KEY = registerKey("desert_oak");
 
+    public static final RegistryKey<ConfiguredFeature<?, ?>> AUTUMN_TREE = registerKey("autumn_tree");
+
     public static final RegistryKey<ConfiguredFeature<?, ?>> MAHOGANY_TREE = registerKey("mahogany_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> SMALL_MAHOGANY_TREE = registerKey("mahogany_tree_small");
 

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "jaizmod:block/blooming_ivy_crop_stage3"
+  }
+}

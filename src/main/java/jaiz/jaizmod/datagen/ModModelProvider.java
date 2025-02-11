@@ -101,6 +101,7 @@ public class ModModelProvider extends FabricModelProvider {
         desert_oak_pool.pressurePlate(ModBlocks.DESERT_OAK_PRESSURE_PLATE);
 
         blockStateModelGenerator.registerTintableCross(ModBlocks.DESERT_OAK_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(ModBlocks.AUTUMN_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerTintableCross(ModBlocks.MAHOGANY_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
 
         blockStateModelGenerator.registerDoor(ModBlocks.DESERT_OAK_DOOR);
@@ -209,6 +210,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.SNAIL_BOTTLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.DRAGONFLY_BOTTLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.CATERPILLAR_BOTTLE, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.BLOOMING_IVY_SEEDS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ANCIENT_SPROUT_SEEDS, Models.GENERATED);
 
     }
 }

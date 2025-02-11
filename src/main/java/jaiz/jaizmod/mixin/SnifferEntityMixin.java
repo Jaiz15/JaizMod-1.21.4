@@ -1,8 +1,5 @@
 package jaiz.jaizmod.mixin;
 
-import jaiz.jaizmod.entity.butterfly.ButterflyVariant;
-import jaiz.jaizmod.entity.dragonfly.DragonflyEntity;
-import jaiz.jaizmod.entity.dragonfly.DragonflyVariant;
 import jaiz.jaizmod.entity.sniffer_mixins.SnifferGroupRevengeGoal;
 import jaiz.jaizmod.entity.sniffer_mixins.SnifferMixinAccessor;
 import jaiz.jaizmod.entity.sniffer_mixins.SnifferRevengeGoal;
@@ -53,10 +50,13 @@ import java.util.List;
 import java.util.Objects;
 
 @Mixin(SnifferEntity.class)
-public abstract class SnifferEntityMixin extends AnimalEntity implements SnifferMixinAccessor {
+public abstract class SnifferEntityMixin
+        extends AnimalEntity implements
+        SnifferMixinAccessor {
 
     @Unique
-    private static final TargetPredicate.EntityPredicate RAM_FILTER = (entity, world) -> !(entity instanceof PlayerEntity playerEntity) || !playerEntity.isCreative();
+    private static final TargetPredicate.EntityPredicate RAM_FILTER = (entity, world)
+            -> !(entity instanceof PlayerEntity playerEntity) || !playerEntity.isCreative();
 
     @Unique
     private static final TargetPredicate RAM_TARGET_PREDICATE = TargetPredicate.createNonAttackable()
@@ -73,7 +73,8 @@ public abstract class SnifferEntityMixin extends AnimalEntity implements Sniffer
 
     @Unique
     private static final TrackedData<Boolean> SNOWY =
-            DataTracker.registerData(SnifferEntityMixin.class, TrackedDataHandlerRegistry.BOOLEAN);
+            DataTracker.registerData(SnifferEntityMixin.class,
+                    TrackedDataHandlerRegistry.BOOLEAN);
     @Unique
     private static final TrackedData<Boolean> SADDLED =
             DataTracker.registerData(SnifferEntityMixin.class, TrackedDataHandlerRegistry.BOOLEAN);
@@ -353,11 +354,13 @@ public abstract class SnifferEntityMixin extends AnimalEntity implements Sniffer
         if (this.getSteppingBlockState().isOf(Blocks.MUD) && !this.isMuddy()) {
             this.setMuddy(true);
         }
-        if (this.hasControllingPassenger() && Objects.requireNonNull(this.getControllingPassenger()).isSprinting() && rammingCooldown < 30)
+        if (this.hasControllingPassenger() && Objects.requireNonNull
+                (this.getControllingPassenger()).isSprinting() && rammingCooldown < 30)
         {
             if (this.getWorld() instanceof ServerWorld serverWorld && this.isAlive()) {
                 for (MobEntity mobEntity : this.getWorld()
-                        .getEntitiesByClass(MobEntity.class, this.getBoundingBox().expand(0.3), mobEntityx -> RAM_TARGET_PREDICATE.test(serverWorld, this, mobEntityx))) {
+                        .getEntitiesByClass(MobEntity.class, this.getBoundingBox().expand(0.3),
+                                mobEntityx -> RAM_TARGET_PREDICATE.test(serverWorld, this, mobEntityx))) {
                     if (mobEntity.isAlive()) {
                         this.ram(serverWorld, mobEntity);
                         rammingCooldown += 45;
@@ -370,14 +373,15 @@ public abstract class SnifferEntityMixin extends AnimalEntity implements Sniffer
         }
 
         RegistryEntry<Biome> registryEntry = this.getWorld().getBiome(this.getBlockPos());
-        if(this.random.nextInt(10000) == 1){
+        if(this.random.nextInt(10000) == 1 && !this.getWorld().isClient()){
             if (registryEntry.isIn(ModTags.Biomes.SNIFFER_CHERRY) && !this.isCherryBlossom()) {
                 this.setCherryBlossom(true);
             }
             if (registryEntry.isIn(ModTags.Biomes.SNIFFER_MOSSY) && !this.isMossy()) {
                 this.setMossy(true);
             }
-            if (registryEntry.isIn(BiomeTags.SPAWNS_SNOW_FOXES) && this.getWorld().isRaining() && !this.isSnowy()) {
+            if (registryEntry.isIn(BiomeTags.SPAWNS_SNOW_FOXES) && this.getWorld()
+                    .isRaining() && !this.isSnowy()) {
             this.setSnowy(true);
             }
             else if (registryEntry.isIn(BiomeTags.SPAWNS_WARM_VARIANT_FROGS) && this.isSnowy()) {
@@ -402,10 +406,12 @@ public abstract class SnifferEntityMixin extends AnimalEntity implements Sniffer
             this.setBreedingAge(-24000);
         }
         passiveData.countSpawned();
-        if(this.random.nextInt(50) == 1){
+        if(this.random.nextInt(50) == 1  && !this.getWorld().isClient()){
             this.setBull(true);
-            Objects.requireNonNull(this.getAttributeInstance(EntityAttributes.ATTACK_DAMAGE)).setBaseValue(8.0);
-            Objects.requireNonNull(this.getAttributeInstance(EntityAttributes.MAX_HEALTH)).setBaseValue(40.0);
+            Objects.requireNonNull(this.
+                    getAttributeInstance(EntityAttributes.ATTACK_DAMAGE)).setBaseValue(8.0);
+            Objects.requireNonNull(this.
+                    getAttributeInstance(EntityAttributes.MAX_HEALTH)).setBaseValue(40.0);
             this.heal(32);
         }
         setTexture();

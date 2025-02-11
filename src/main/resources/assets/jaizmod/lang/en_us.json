@@ -14,9 +14,17 @@
   "block.jaizmod.rot_roots": "Rot Roots",
   "item.jaizmod.rot_roots": "Rot Roots",
 
+  "item.jaizmod.blooming_ivy_seeds": "Blooming Ivy Seeds",
+  "item.jaizmod.ancient_sprout_seeds": "Ancient Sprout Seeds",
+
+  "block.jaizmod.blooming_ivy_crop": "Blooming Ivy Crop",
+  "block.jaizmod.ancient_sprout_crop": "Ancient Sprout Crop",
+
   "block.jaizmod.pink_floral_veil": "Pink Floral Veil",
   "block.jaizmod.white_floral_veil": "White Floral Veil",
   "block.jaizmod.yellow_floral_veil": "Yellow Floral Veil",
+
+  "block.jaizmod.autumn_sapling": "Autumn Sapling",
 
   "block.jaizmod.dead_leaves": "Dead Leaves",
   "block.jaizmod.dried_leaves": "Dried Leaves",

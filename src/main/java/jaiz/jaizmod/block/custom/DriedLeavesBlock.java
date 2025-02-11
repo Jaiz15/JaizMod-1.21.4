@@ -1,6 +1,7 @@
 package jaiz.jaizmod.block.custom;
 
 import jaiz.jaizmod.block.ModBlocks;
+import jaiz.jaizmod.util.ModTags;
 import net.minecraft.block.*;
 import net.minecraft.particle.ParticleEffect;
 import net.minecraft.registry.tag.BlockTags;
@@ -20,7 +21,7 @@ public class DriedLeavesBlock extends ParticleLeavesBlock {
 
     @Override
     protected boolean hasRandomTicks(BlockState state) {
-        return state.get(ROTTING) == 1 && !(Boolean)state.get(PERSISTENT);
+        return !(Boolean)state.get(PERSISTENT);
     }
 
     @Override
@@ -42,31 +43,31 @@ public class DriedLeavesBlock extends ParticleLeavesBlock {
         BlockState blockStatedried = ModBlocks.DRIED_LEAVES.getDefaultState().with(ROTTING, 1).with(DISTANCE, 3);
         BlockState blockStatedead = ModBlocks.DEAD_LEAVES.getDefaultState().with(DISTANCE, 3);
 
-        if (random.nextInt(100) == 1) {
+        if (random.nextInt(100) == 1 && state.get(ROTTING) == 1) {
             world.setBlockState(pos, blockStatedead);
         }
         if (random.nextInt(5) == 1) {
-            if (blockState.isIn(BlockTags.LEAVES)) {
+            if (blockState.isIn(ModTags.Blocks.ROTTABLE_LEAVES) && state.get(ROTTING) == 1) {
                 world.setBlockState(blockPos, blockStatedried);
             }}
         if (random.nextInt(5) == 1) {
-            if (blockState1.isIn(BlockTags.LEAVES)) {
+            if (blockState1.isIn(ModTags.Blocks.ROTTABLE_LEAVES) && state.get(ROTTING) == 1) {
                 world.setBlockState(blockPos1, blockStatedried);
             }}
         if (random.nextInt(5) == 1) {
-            if (blockState2.isIn(BlockTags.LEAVES)) {
+            if (blockState2.isIn(ModTags.Blocks.ROTTABLE_LEAVES) && state.get(ROTTING) == 1) {
                 world.setBlockState(blockPos2, blockStatedried);
             }}
         if (random.nextInt(5) == 1) {
-            if (blockState3.isIn(BlockTags.LEAVES)) {
+            if (blockState3.isIn(ModTags.Blocks.ROTTABLE_LEAVES) && state.get(ROTTING) == 1) {
                 world.setBlockState(blockPos3, blockStatedried);
             }}
         if (random.nextInt(5) == 1) {
-            if (blockState4.isIn(BlockTags.LEAVES)) {
+            if (blockState4.isIn(ModTags.Blocks.ROTTABLE_LEAVES) && state.get(ROTTING) == 1) {
                 world.setBlockState(blockPos4, blockStatedried);
             }}
         if (random.nextInt(5) == 1) {
-            if (blockState5.isIn(BlockTags.LEAVES)) {
+            if (blockState5.isIn(ModTags.Blocks.ROTTABLE_LEAVES)  && state.get(ROTTING) == 1) {
                 world.setBlockState(blockPos5, blockStatedried);
             }}
     }

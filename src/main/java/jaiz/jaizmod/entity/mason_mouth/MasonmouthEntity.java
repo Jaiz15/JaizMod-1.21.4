@@ -163,7 +163,8 @@ public class MasonmouthEntity extends GolemEntity {
     }
 
     @Override
-    public boolean damage(ServerWorld world, DamageSource source, float amount) {
+    public boolean damage(ServerWorld world,
+                          DamageSource source, float amount) {
         boolean bl = super.damage(world, source, amount);
         if (bl) {
             this.setCracked(this.getHealth() <= 5);

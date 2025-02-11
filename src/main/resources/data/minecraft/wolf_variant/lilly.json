@@ -1,0 +1,6 @@
+{
+  "angry_texture": "minecraft:entity/wolf/lilly_angry",
+  "biomes": "minecraft:flower_forest",
+  "tame_texture": "minecraft:entity/wolf/lilly_tame",
+  "wild_texture": "minecraft:entity/wolf/lilly"
+}

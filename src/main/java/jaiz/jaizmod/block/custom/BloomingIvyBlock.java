@@ -3,6 +3,7 @@ package jaiz.jaizmod.block.custom;
 import jaiz.jaizmod.block.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.LeavesBlock;
 import net.minecraft.block.VineBlock;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
@@ -43,6 +44,11 @@ public class BloomingIvyBlock extends VineBlock {
                         .with(STAGE, 1)
                         .with(LOCKED, false)
         );
+    }
+
+    @Override
+    protected boolean hasRandomTicks(BlockState state) {
+        return !state.get(LOCKED);
     }
 
     @Override
