@@ -214,6 +214,8 @@ public class ModItems {
     public static BlockItem DRIED_LEAVES = registerBlockItem("dried_leaves", ModBlocks.DRIED_LEAVES);
     public static BlockItem BLOOMING_IVY_BLOCK = registerBlockItem("blooming_ivy_block", ModBlocks.BLOOMING_IVY_BLOCK);
 
+    public static BlockItem FROST = registerBlockItem("frost", ModBlocks.FROST);
+    public static BlockItem SNOWY_LEAVES = registerBlockItem("snowy_leaves", ModBlocks.SNOWY_LEAVES);
     public static BlockItem WHITE_FLORAL_VEIL = registerBlockItem("white_floral_veil", ModBlocks.WHITE_FLORAL_VEIL);
     public static BlockItem PINK_FLORAL_VEIL = registerBlockItem("pink_floral_veil", ModBlocks.PINK_FLORAL_VEIL);
     public static BlockItem YELLOW_FLORAL_VEIL = registerBlockItem("yellow_floral_veil", ModBlocks.YELLOW_FLORAL_VEIL);
@@ -261,6 +263,12 @@ public class ModItems {
     public static final Item TERRACOTTA_BRICK_STAIRS = registerBlockItem("terracotta_brick_stairs", ModBlocks.TERRACOTTA_BRICK_STAIRS);
     public static final Item TERRACOTTA_BRICK_WALL = registerBlockItem("terracotta_brick_wall", ModBlocks.TERRACOTTA_BRICK_WALL);
     public static final Item TERRACOTTA_BRICK_SLAB = registerBlockItem("terracotta_brick_slab", ModBlocks.TERRACOTTA_BRICK_SLAB);
+
+    public static final Item PACKED_GUANO = registerBlockItem("packed_guano", ModBlocks.PACKED_GUANO);
+    public static final Item GUANO_BRICKS = registerBlockItem("guano_bricks", ModBlocks.GUANO_BRICKS);
+    public static final Item GUANO_BRICK_STAIRS = registerBlockItem("guano_brick_stairs", ModBlocks.GUANO_BRICK_STAIRS);
+    public static final Item GUANO_BRICK_WALL = registerBlockItem("guano_brick_wall", ModBlocks.GUANO_BRICK_WALL);
+    public static final Item GUANO_BRICK_SLAB = registerBlockItem("guano_brick_slab", ModBlocks.GUANO_BRICK_SLAB);
 
     public static final Item DESERT_OAK_BUTTON = registerBlockItem("desert_oak_button", ModBlocks.DESERT_OAK_BUTTON);
     public static final Item DESERT_OAK_PRESSURE_PLATE = registerBlockItem("desert_oak_pressure_plate", ModBlocks.DESERT_OAK_PRESSURE_PLATE);
@@ -339,7 +347,8 @@ public class ModItems {
 
     public static final Item SLIMEY_STONE = registerBlockItem("slimey_stone", ModBlocks.SLIMEY_STONE);
     public static final Item SLIME_DRIP = registerBlockItem("slime_drip", ModBlocks.SLIME_DRIP);
-    public static final Item GUANO_PILE = registerBlockItem("guano_block", ModBlocks.GUANO_PILE);
+    public static final Item GUANO_BLOCK = registerBlockItem("guano_block", ModBlocks.GUANO_BLOCK);
+    public static final Item GUANO_PILE = registerBlockItem("guano_pile", ModBlocks.GUANO_PILE);
     public static final Item TEAPOTBLOCK = registerBlockItem("tea_pot_block", ModBlocks.TEAPOTBLOCK);
     public static final Item BIOLUMINESCENT_BOTTLE = registerBlockItem("bioluminescent_bottle", ModBlocks.BIOLUMINESCENT_BOTTLE);
 

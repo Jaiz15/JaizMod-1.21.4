@@ -12,7 +12,10 @@
   "block.jaizmod.shelf_mushroom_block": "Shelf Mushroom",
 
   "block.jaizmod.rot_roots": "Rot Roots",
+  "block.jaizmod.frost": "Frost",
   "item.jaizmod.rot_roots": "Rot Roots",
+
+  "block.jaizmod.snowy_leaves": "Snowy Leaves",
 
   "item.jaizmod.blooming_ivy_seeds": "Blooming Ivy Seeds",
   "item.jaizmod.ancient_sprout_seeds": "Ancient Sprout Seeds",
@@ -64,7 +67,14 @@
 
   "item.jaizmod.guano": "Guano",
   "entity.jaizmod.guano": "Guano",
-  "block.jaizmod.guano_block": "Guano Pile",
+  "block.jaizmod.guano_block": "Guano Block",
+  "block.jaizmod.guano_pile": "Guano Pile",
+  "block.jaizmod.packed_guano": "Packed Guano",
+  "block.jaizmod.guano_bricks": "Guano Bricks",
+  "block.jaizmod.guano_brick_slab": "Guano Brick Slab",
+  "block.jaizmod.guano_brick_stairs": "Guano Brick Stairs",
+  "block.jaizmod.guano_brick_wall": "Guano Brick Wall",
+
 
   "entity.jaizmod.rotten_boat": "Rotten Boat",
   "entity.jaizmod.rotten_chest_boat": "Rotten Chest Boat",

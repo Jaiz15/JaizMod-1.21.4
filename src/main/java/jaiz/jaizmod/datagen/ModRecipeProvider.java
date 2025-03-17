@@ -45,6 +45,12 @@ public class ModRecipeProvider extends RecipeGenerator {
                 .criterion(hasItem(ModItems.PLATED_CALCITE), conditionsFromItem(ModItems.PLATED_CALCITE))
                 .offerTo(exporter);
 
+        this.createShaped(RecipeCategory.BUILDING_BLOCKS, ModItems.FROST, 4)
+                .pattern("RR")
+                .input('R', Items.ICE)
+                .criterion(hasItem(Items.ICE), conditionsFromItem(Items.ICE))
+                .offerTo(exporter);
+
         this.createShaped(RecipeCategory.DECORATIONS, ModItems.BLOOMING_IVY_BLOCK, 4)
                 .pattern("RR")
                 .pattern("RR")
@@ -721,6 +727,39 @@ public class ModRecipeProvider extends RecipeGenerator {
                 .criterion(hasItem(ModItems.TERRACOTTA_BRICKS), conditionsFromItem(ModItems.TERRACOTTA_BRICKS))
                 .offerTo(exporter);
 
+        this.createShaped(RecipeCategory.BUILDING_BLOCKS, ModItems.GUANO_BRICKS, 4)
+                .pattern("RR")
+                .pattern("RR")
+                .input('R', ModItems.PACKED_GUANO)
+                .criterion(hasItem(ModItems.PACKED_GUANO), conditionsFromItem(ModItems.PACKED_GUANO))
+                .offerTo(exporter);
+
+
+        this.createShaped(RecipeCategory.BUILDING_BLOCKS, ModItems.GUANO_BRICK_SLAB, 6)
+                .pattern("RRR")
+                .input('R', ModItems.GUANO_BRICKS)
+                .criterion(hasItem(ModItems.GUANO_BRICKS), conditionsFromItem(ModItems.GUANO_BRICKS))
+                .offerTo(exporter);
+
+        this.createShaped(RecipeCategory.BUILDING_BLOCKS, ModItems.GUANO_BRICK_STAIRS, 4)
+                .pattern("R  ")
+                .pattern("RR ")
+                .pattern("RRR")
+                .input('R', ModItems.GUANO_BRICKS)
+                .criterion(hasItem(ModItems.GUANO_BRICKS), conditionsFromItem(ModItems.GUANO_BRICKS))
+                .offerTo(exporter);
+
+        this.createShaped(RecipeCategory.BUILDING_BLOCKS, ModItems.GUANO_BRICK_WALL, 6)
+                .pattern("RRR")
+                .pattern("RRR")
+                .input('R', ModItems.GUANO_BRICKS)
+                .criterion(hasItem(ModItems.GUANO_BRICKS), conditionsFromItem(ModItems.GUANO_BRICKS))
+                .offerTo(exporter);
+
+
+
+
+
         this.createShaped(RecipeCategory.FOOD, ModItems.SPICE_BARREL, 1)
                 .pattern("RRR")
                 .pattern("RXR")
@@ -951,10 +990,17 @@ public class ModRecipeProvider extends RecipeGenerator {
                 .criterion(hasItem(Items.BONE_MEAL), conditionsFromItem(Items.BONE_MEAL))
                 .offerTo(exporter);
 
-        this.createShapeless(RecipeCategory.BUILDING_BLOCKS, ModItems.GUANO_PILE, 1)
-                .input(ModItems.GUANO)
+        this.createShaped(RecipeCategory.DECORATIONS, ModItems.GUANO_PILE, 2)
+                .pattern("RR")
+                .input('R', ModItems.GUANO)
                 .criterion(hasItem(ModItems.GUANO), conditionsFromItem(ModItems.GUANO))
-                .offerTo(this.exporter);
+                .offerTo(exporter);
+        this.createShaped(RecipeCategory.DECORATIONS, ModItems.GUANO_BLOCK, 1)
+                .pattern("RR")
+                .pattern("RR")
+                .input('R', ModItems.GUANO)
+                .criterion(hasItem(ModItems.GUANO), conditionsFromItem(ModItems.GUANO))
+                .offerTo(exporter);
 
         this.createShapeless(RecipeCategory.BUILDING_BLOCKS, Items.BONE_MEAL, 3)
                 .input(ModItems.GUANO)
@@ -1138,6 +1184,14 @@ public class ModRecipeProvider extends RecipeGenerator {
                 .input(Items.CHEST)
                 .criterion(hasItem(ModItems.ROTTEN_BOAT), conditionsFromItem(ModItems.ROTTEN_BOAT))
                 .criterion(hasItem(Items.CHEST), conditionsFromItem(Items.CHEST))
+                .offerTo(exporter);
+
+
+        this.createShapeless(RecipeCategory.TRANSPORTATION, ModItems.PACKED_GUANO, 4)
+                .input(ModItems.GUANO_BLOCK)
+                .input(Items.WHEAT)
+                .criterion(hasItem(ModItems.GUANO_BLOCK), conditionsFromItem(ModItems.GUANO_BLOCK))
+                .criterion(hasItem(Items.WHEAT), conditionsFromItem(Items.WHEAT))
                 .offerTo(exporter);
 
         this.createShaped(RecipeCategory.COMBAT, ModItems.MACUAHUITL, 1)

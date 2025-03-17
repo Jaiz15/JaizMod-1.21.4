@@ -1,16 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "minecraft:item/template_spawn_egg",
-    "tints": [
-      {
-        "type": "minecraft:constant",
-        "value": -15333111
-      },
-      {
-        "type": "minecraft:constant",
-        "value": -104682
-      }
-    ]
+    "model": "jaizmod:item/butterfly_spawn_egg"
   }
 }

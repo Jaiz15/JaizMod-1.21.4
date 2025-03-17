@@ -93,6 +93,12 @@ public class ModModelProvider extends FabricModelProvider {
         terracotta_brick_pool.slab(ModBlocks.TERRACOTTA_BRICK_SLAB);
         terracotta_brick_pool.wall(ModBlocks.TERRACOTTA_BRICK_WALL);
 
+        BlockStateModelGenerator.BlockTexturePool guano_pool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.GUANO_BRICKS);
+        guano_pool.family(ModBlocks.GUANO_FAMILY);
+        guano_pool.stairs(ModBlocks.GUANO_BRICK_STAIRS);
+        guano_pool.slab(ModBlocks.GUANO_BRICK_SLAB);
+        guano_pool.wall(ModBlocks.GUANO_BRICK_WALL);
+
         desert_oak_pool.stairs(ModBlocks.DESERT_OAK_STAIRS);
         desert_oak_pool.slab(ModBlocks.DESERT_OAK_SLAB);
         desert_oak_pool.fence(ModBlocks.DESERT_OAK_FENCE);
@@ -110,7 +116,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerBrushableBlock(ModBlocks.FOSSIL_SOIL);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PETRIFIED_DIRT);
-
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PACKED_GUANO);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SNOWY_LEAVES);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DRIED_LEAVES);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEAD_LEAVES);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BLOOMING_IVY_BLOCK);
@@ -122,6 +129,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerMultifaceBlock(ModBlocks.YELLOW_FLORAL_VEIL);
         blockStateModelGenerator.registerMultifaceBlock(ModBlocks.WHITE_FLORAL_VEIL);
         blockStateModelGenerator.registerMultifaceBlock(ModBlocks.PINK_FLORAL_VEIL);
+        blockStateModelGenerator.registerMultifaceBlock(ModBlocks.FROST);
+        blockStateModelGenerator.registerRotatable(ModBlocks.GUANO_BLOCK);
 
         blockStateModelGenerator.registerHangingSign(ModBlocks.HANGING_MAHOGANY_SIGN, ModBlocks.HANGING_MAHOGANY_SIGN, ModBlocks.WALL_HANGING_MAHOGANY_SIGN);
     }
@@ -181,13 +190,13 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.GUANO, Models.GENERATED);
 
-        itemModelGenerator.registerSpawnEgg(ModItems.CATERPILLAR_SPAWN_EGG, 4373056, 15659323);
-        itemModelGenerator.registerSpawnEgg(ModItems.SNAIL_SPAWN_EGG, 4202775, 10527611);
-        itemModelGenerator.registerSpawnEgg(ModItems.BUTTERFLY_SPAWN_EGG, 1444105, 16672534);
-        itemModelGenerator.registerSpawnEgg(ModItems.DRAGONFLY_SPAWN_EGG, 786702, 5594579);
-        itemModelGenerator.registerSpawnEgg(ModItems.FRUIT_BAT_SPAWN_EGG, 4663568, 14859160);
-        itemModelGenerator.registerSpawnEgg(ModItems.BANDIT_SPAWN_EGG, 11307884, 7424065);
-        itemModelGenerator.registerSpawnEgg(ModItems.FIREFLY_SWARM_SPAWN_EGG, 132352, 11665162);
+        itemModelGenerator.register(ModItems.CATERPILLAR_SPAWN_EGG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SNAIL_SPAWN_EGG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BUTTERFLY_SPAWN_EGG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.DRAGONFLY_SPAWN_EGG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.FRUIT_BAT_SPAWN_EGG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BANDIT_SPAWN_EGG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.FIREFLY_SWARM_SPAWN_EGG, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.TEA_CUP, Models.GENERATED);
         itemModelGenerator.register(ModItems.NOVEL_TEA, Models.GENERATED);

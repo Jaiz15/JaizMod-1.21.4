@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "R": "jaizmod:guano_bricks"
+  },
+  "pattern": [
+    "R  ",
+    "RR ",
+    "RRR"
+  ],
+  "result": {
+    "count": 4,
+    "id": "jaizmod:guano_brick_stairs"
+  }
+}

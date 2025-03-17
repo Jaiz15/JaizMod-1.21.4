@@ -26,7 +26,6 @@ public class FireflyRenderer<T extends FireFlySwarmEntity> extends MobEntityRend
     }
 
     public void updateRenderState(FireFlySwarmEntity entity, FireFlyRenderState state, float f) {
-        super.updateRenderState((T) entity, state, f);
         state.flyingAnimationState.copyFrom(entity.fireflyAnimationState);
     }
 

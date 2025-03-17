@@ -1,16 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "minecraft:item/template_spawn_egg",
-    "tints": [
-      {
-        "type": "minecraft:constant",
-        "value": -5469332
-      },
-      {
-        "type": "minecraft:constant",
-        "value": -9353151
-      }
-    ]
+    "model": "jaizmod:item/bandit_spawn_egg"
   }
 }

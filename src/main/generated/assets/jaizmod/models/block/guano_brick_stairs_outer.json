@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "jaizmod:block/guano_bricks",
+    "side": "jaizmod:block/guano_bricks",
+    "top": "jaizmod:block/guano_bricks"
+  }
+}

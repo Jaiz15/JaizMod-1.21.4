@@ -124,6 +124,8 @@ public class JaizModClient implements ClientModInitializer {
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BLOOMING_IVY_BLOCK, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DRIED_LEAVES, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DEAD_LEAVES, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FROST, RenderLayer.getTranslucent());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SNOWY_LEAVES, RenderLayer.getTranslucent());
 
 		EntityRendererRegistry.register(ModEntities.MASON_MOUTH, MasonMouthRenderer::new);
 		EntityModelLayerRegistry.registerModelLayer(ModModelLayers.MASON_MOUTH, Masonmouth::getTexturedModelData);
@@ -140,6 +142,7 @@ public class JaizModClient implements ClientModInitializer {
 		ParticleFactoryRegistry.getInstance().register(JaizMod.DRY_LEAF_PARTICLE, LeavesParticle.PaleOakLeavesFactory::new);
 		ParticleFactoryRegistry.getInstance().register(JaizMod.BLOOMING_IVY_PARTICLE, LeavesParticle.PaleOakLeavesFactory::new);
 		ParticleFactoryRegistry.getInstance().register(JaizMod.DEAD_LEAF_PARTICLE, LeavesParticle.PaleOakLeavesFactory::new);
+		ParticleFactoryRegistry.getInstance().register(JaizMod.SNOW_PARTICLE, LeavesParticle.PaleOakLeavesFactory::new);
 
 	}
 

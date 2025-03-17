@@ -91,6 +91,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE)
                 .add(ModBlocks.FOSSIL_SOIL)
+                .add(ModBlocks.GUANO_BLOCK)
                 .add(ModBlocks.PETRIFIED_DIRT)
                 .add(ModBlocks.ROT_BLOCK);
 
@@ -99,6 +100,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.PETRIFIED_DIRT);
 
         getOrCreateTagBuilder(BlockTags.WALLS)
+                .add(ModBlocks.GUANO_BRICK_WALL)
                 .add(ModBlocks.TERRACOTTA_BRICK_WALL);
 
 
@@ -111,11 +113,19 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.DESERT_OAK_LEAVES)
                 .add(ModBlocks.DRIED_LEAVES)
                 .add(ModBlocks.DEAD_LEAVES)
+                .add(ModBlocks.SNOWY_LEAVES)
                 .add(ModBlocks.MAHOGANY_LEAVES);
 
 
         getOrCreateTagBuilder(BlockTags.WOODEN_SLABS)
                 .add(ModBlocks.DESERT_OAK_SLAB)
+                .add(ModBlocks.ROTTEN_SLAB)
+                .add(ModBlocks.MAHOGANY_SLAB);
+
+        getOrCreateTagBuilder(BlockTags.SLABS)
+                .add(ModBlocks.DESERT_OAK_SLAB)
+                .add(ModBlocks.TERRACOTTA_BRICK_SLAB)
+                .add(ModBlocks.GUANO_BRICK_SLAB)
                 .add(ModBlocks.ROTTEN_SLAB)
                 .add(ModBlocks.MAHOGANY_SLAB);
 
@@ -127,6 +137,13 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.WOODEN_STAIRS)
                 .add(ModBlocks.DESERT_OAK_STAIRS)
+                .add(ModBlocks.ROTTEN_STAIRS)
+                .add(ModBlocks.MAHOGANY_STAIRS);
+
+        getOrCreateTagBuilder(BlockTags.STAIRS)
+                .add(ModBlocks.DESERT_OAK_STAIRS)
+                .add(ModBlocks.TERRACOTTA_BRICK_STAIRS)
+                .add(ModBlocks.GUANO_BRICK_STAIRS)
                 .add(ModBlocks.ROTTEN_STAIRS)
                 .add(ModBlocks.MAHOGANY_STAIRS);
 
@@ -163,6 +180,12 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.STRIPPED_ROTTEN_WOOD);
 
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+
+                .add(ModBlocks.PACKED_GUANO)
+                .add(ModBlocks.GUANO_BRICK_WALL)
+                .add(ModBlocks.GUANO_BRICK_STAIRS)
+                .add(ModBlocks.GUANO_BRICK_SLAB)
+                .add(ModBlocks.GUANO_BRICKS)
                 .add(ModBlocks.TERRACOTTA_BRICK_WALL)
                 .add(ModBlocks.TERRACOTTA_BRICK_STAIRS)
                 .add(ModBlocks.TERRACOTTA_BRICKS)

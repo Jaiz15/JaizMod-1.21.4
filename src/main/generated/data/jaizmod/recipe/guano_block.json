@@ -1,8 +1,12 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "building",
-  "ingredients": [
-    "jaizmod:guano"
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": "jaizmod:guano"
+  },
+  "pattern": [
+    "RR",
+    "RR"
   ],
   "result": {
     "count": 1,

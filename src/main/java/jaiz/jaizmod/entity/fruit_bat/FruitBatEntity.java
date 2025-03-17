@@ -40,7 +40,6 @@ public class FruitBatEntity extends BatEntity {
                     (this.random.nextFloat() - this.random.nextFloat()) * 0.2f + 1.5f);
             poop.refreshPositionAndAngles(this.getX(),
                     this.getY() - 0.5, this.getZ(), 0.0F, 0.0F);
-            this.getWorld().spawnEntity(poop);
             poopTime = this.random.nextInt(5000) + 3000;
         }
         super.tick();
@@ -54,7 +53,6 @@ public class FruitBatEntity extends BatEntity {
             if(!player.isCreative()){
             itemStack.decrement(1);}
             GuanoEntity poop = new GuanoEntity(ModEntities.GUANO, this.getWorld());
-            this.getWorld().spawnEntity(poop);
             if (this.random.nextInt(4) == 1) {
                 this.playSound(SoundEvents.ENTITY_SLIME_SQUISH, 0.5f, (this.random.nextFloat() - this.random.nextFloat()) * 0.2f + 1.5f);
                 poop.refreshPositionAndAngles(this.getX(), this.getY() - 0.5, this.getZ(), 0.0F, 0.0F);

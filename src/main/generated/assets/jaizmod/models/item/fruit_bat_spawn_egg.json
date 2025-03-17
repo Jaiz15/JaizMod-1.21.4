@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "jaizmod:item/fruit_bat_spawn_egg"
+  }
+}

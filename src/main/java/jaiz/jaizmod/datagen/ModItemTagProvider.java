@@ -215,6 +215,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.DESERT_OAK_LEAVES)
                 .add(ModItems.DEAD_LEAVES)
                 .add(ModItems.DRIED_LEAVES)
+                .add(ModItems.SNOWY_LEAVES)
                 .add(ModItems.MAHOGANY_LEAVES);
 
         getOrCreateTagBuilder(ItemTags.SAPLINGS)

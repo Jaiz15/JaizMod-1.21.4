@@ -1,16 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "minecraft:item/template_spawn_egg",
-    "tints": [
-      {
-        "type": "minecraft:constant",
-        "value": -16644864
-      },
-      {
-        "type": "minecraft:constant",
-        "value": -5112054
-      }
-    ]
+    "model": "jaizmod:item/firefly_swarm_spawn_egg"
   }
 }

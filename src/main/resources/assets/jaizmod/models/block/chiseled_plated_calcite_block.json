@@ -1,26 +1,25 @@
 {
-	"credit": "Made with Blockbench",
+	"parent": "block/block",
 	"textures": {
-		"0": "jaizmod:block/chiseled_plated_calcite_side_2",
-		"1": "jaizmod:block/chiseled_plated_calcite",
-		"2": "jaizmod:block/chiseled_plated_calcite_side",
-		"3": "jaizmod:block/chiseled_plated_calcite_back",
-		"4": "jaizmod:block/chiseled_plated_calcite_bottom",
-		"5": "jaizmod:block/chiseled_plated_calcite_top",
-		"particle": "jaizmod:block/chiseled_plated_calcite_side_2"
+		"bottom": "jaizmod:block/chiseled_plated_calcite_bottom",
+		"top": "jaizmod:block/chiseled_plated_calcite_top",
+		"north": "jaizmod:block/chiseled_plated_calcite",
+		"south": "jaizmod:block/chiseled_plated_calcite_back",
+		"west": "jaizmod:block/chiseled_plated_calcite_side",
+		"east": "jaizmod:block/chiseled_plated_calcite_side_2",
+		"particle": "#north"
 	},
 	"elements": [
 		{
-			"from": [0, 0, 0],
-			"to": [16, 16, 16],
-			"rotation": {"angle": 0, "axis": "x", "origin": [8, 8, 8]},
+			"from": [ 0, 0, 0 ],
+			"to": [ 16, 16, 16 ],
 			"faces": {
-				"north": {"uv": [0, 0, 16, 16], "rotation": 180, "texture": "#4"},
-				"east": {"uv": [0, 0, 16, 16], "rotation": 270, "texture": "#0"},
-				"south": {"uv": [0, 0, 16, 16], "texture": "#5"},
-				"west": {"uv": [0, 0, 16, 16], "rotation": 90, "texture": "#2"},
-				"up": {"uv": [0, 0, 16, 16], "rotation": 180, "texture": "#1"},
-				"down": {"uv": [0, 0, 16, 16], "texture": "#3"}
+				"down":  { "uv": [ 0, 0, 16, 16 ], "texture": "#bottom", "cullface": "down" },
+				"up":    { "uv": [ 0, 0, 16, 16 ], "rotation": 180, "texture": "#top", "cullface": "up" },
+				"north": { "uv": [ 0, 0, 16, 16 ], "texture": "#north", "cullface": "north" },
+				"south": { "uv": [ 0, 0, 16, 16 ], "texture": "#south", "cullface": "south" },
+				"west":  { "uv": [ 0, 0, 16, 16 ], "texture": "#west", "cullface": "west" },
+				"east":  { "uv": [ 0, 0, 16, 16 ], "texture": "#east", "cullface": "east" }
 			}
 		}
 	]

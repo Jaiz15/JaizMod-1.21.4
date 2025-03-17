@@ -87,7 +87,14 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.TERRACOTTA_BRICK_SLAB, slabDrops(ModBlocks.TERRACOTTA_BRICK_SLAB));
         addDrop(ModBlocks.TERRACOTTA_BRICK_STAIRS);
 
+        addDrop(ModBlocks.PACKED_GUANO);
+        addDrop(ModBlocks.GUANO_BRICKS);
+        addDrop(ModBlocks.GUANO_BRICK_WALL);
+        addDrop(ModBlocks.GUANO_BRICK_SLAB, slabDrops(ModBlocks.GUANO_BRICK_SLAB));
+        addDrop(ModBlocks.GUANO_BRICK_STAIRS);
+
         addDrop(ModBlocks.DESERT_OAK_LEAVES, leavesDrops(ModBlocks.DESERT_OAK_LEAVES, ModBlocks.DESERT_OAK_SAPLING, 0.2f));
+        addDrop(ModBlocks.SNOWY_LEAVES, leavesDrops(ModBlocks.SNOWY_LEAVES, Blocks.SPRUCE_SAPLING, 0.1f));
 
         addDrop(ModBlocks.MAHOGANY_WOOD);
         addDrop(ModBlocks.STRIPPED_MAHOGANY_WOOD);
@@ -107,6 +114,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.CHISELED_PLATED_CALCITE);
         addDrop(ModBlocks.PLATED_CALCITE);
         addDrop(ModBlocks.MAHOGANY_SAPLING);
+        addDrop(ModBlocks.GUANO_BLOCK);
 
         addDrop(ModBlocks.GUANO_PILE, ModItems.GUANO);
         this.addDrop(ModBlocks.SLIME_DRIP, block -> this.oreDrops(block, Items.SLIME_BALL));
@@ -115,6 +123,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.WALL_WATER_TORCH, ModItems.WATER_TORCH);
 
         addDrop(ModBlocks.WHITE_FLORAL_VEIL, multifaceGrowthDrops(ModBlocks.WHITE_FLORAL_VEIL));
+        addDrop(ModBlocks.FROST, multifaceGrowthDrops(ModBlocks.FROST));
         addDrop(ModBlocks.PINK_FLORAL_VEIL, multifaceGrowthDrops(ModBlocks.PINK_FLORAL_VEIL));
         addDrop(ModBlocks.YELLOW_FLORAL_VEIL, multifaceGrowthDrops(ModBlocks.YELLOW_FLORAL_VEIL));
 

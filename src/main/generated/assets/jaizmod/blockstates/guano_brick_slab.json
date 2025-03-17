@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "jaizmod:block/guano_brick_slab"
+    },
+    "type=double": {
+      "model": "jaizmod:block/guano_bricks"
+    },
+    "type=top": {
+      "model": "jaizmod:block/guano_brick_slab_top"
+    }
+  }
+}

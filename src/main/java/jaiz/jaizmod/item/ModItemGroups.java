@@ -173,6 +173,12 @@ public class ModItemGroups {
                         entries.add(ModItems.SLIME_DRIP);
                         entries.add(ModItems.GUANO);
                         entries.add(ModItems.GUANO_PILE);
+                        entries.add(ModItems.GUANO_BLOCK);
+                        entries.add(ModItems.PACKED_GUANO);
+                        entries.add(ModItems.GUANO_BRICKS);
+                        entries.add(ModItems.GUANO_BRICK_STAIRS);
+                        entries.add(ModItems.GUANO_BRICK_SLAB);
+                        entries.add(ModItems.GUANO_BRICK_WALL);
                         entries.add(ModItems.FRUIT_BAT_SPAWN_EGG);
                         entries.add(ModItems.TEAPOTBLOCK);
                         entries.add(ModItems.UNFIRED_TEA_CUP);
@@ -206,6 +212,8 @@ public class ModItemGroups {
                         entries.add(ModItems.BLOOMING_IVY_SEEDS);
                         entries.add(ModItems.BLOOMING_IVY_BLOCK);
                         entries.add(ModItems.BLOOMING_IVY);
+                        entries.add(ModItems.FROST);
+                        entries.add(ModItems.SNOWY_LEAVES);
                     }).build());
 
     public static void registerItemGroups() {

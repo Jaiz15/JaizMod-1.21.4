@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "jaizmod:guano_block",
+    "minecraft:wheat"
+  ],
+  "result": {
+    "count": 4,
+    "id": "jaizmod:packed_guano"
+  }
+}

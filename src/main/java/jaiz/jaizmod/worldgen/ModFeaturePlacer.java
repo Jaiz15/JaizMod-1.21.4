@@ -181,8 +181,8 @@ public class ModFeaturePlacer {
         BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.MANGROVE_SWAMP), SpawnGroup.CREATURE,
                 ModEntities.SNAIL, 2, 1, 2);
 
-        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST), SpawnGroup.CREATURE,
-                EntityType.WOLF, 8, 2, 4);
+        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.DESERT), SpawnGroup.CREATURE,
+                EntityType.CAMEL, 1, 1, 1);
 
 
         // Spawn Restrictors
@@ -192,5 +192,6 @@ public class ModFeaturePlacer {
         SpawnRestriction.register(ModEntities.FIRE_FLY_SWARM, SpawnRestriction.getLocation(ModEntities.FIRE_FLY_SWARM), Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, AnimalEntity::isValidNaturalSpawn);
         SpawnRestriction.register(ModEntities.DRAGONFLY, SpawnRestriction.getLocation(ModEntities.DRAGONFLY), Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, AnimalEntity::isValidNaturalSpawn);
         SpawnRestriction.register(ModEntities.SNAIL, SpawnRestriction.getLocation(ModEntities.SNAIL), Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, AnimalEntity::isValidNaturalSpawn);
+        SpawnRestriction.register(EntityType.CAMEL, SpawnRestriction.getLocation(EntityType.CAMEL), Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, AnimalEntity::canMobSpawn);
     }
 }

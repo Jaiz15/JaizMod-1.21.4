@@ -83,7 +83,7 @@ public class ModBlocks {
             CarpetBlock::new,AbstractBlock.Settings.copy(Blocks.GREEN_CARPET));
 
     public static final Block CHISELED_PLATED_CALCITE = registerBlock("chiseled_plated_calcite",
-            DirectionalModelBlock::new,AbstractBlock.Settings.copy(Blocks.CALCITE));
+            ExtraDirectionalModelBlock::new,AbstractBlock.Settings.copy(Blocks.CALCITE));
 
     public static final Block BLOOMING_IVY = registerBlock("blooming_ivy",
             BloomingIvyBlock::new,AbstractBlock.Settings.copy(Blocks.VINE).sounds(BlockSoundGroup.VINE).ticksRandomly());
@@ -94,6 +94,8 @@ public class ModBlocks {
             GlowLichenBlock::new,AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).sounds(BlockSoundGroup.GRASS).breakInstantly().noCollision());
     public static final Block YELLOW_FLORAL_VEIL = registerBlock("yellow_floral_veil",
             GlowLichenBlock::new,AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).sounds(BlockSoundGroup.GRASS).breakInstantly().noCollision());
+    public static final Block FROST = registerBlock("frost",
+            MultifaceBlock::new,AbstractBlock.Settings.copy(Blocks.ICE).sounds(BlockSoundGroup.GLASS).breakInstantly().noCollision());
 
     public static final Block BIOLUMINESCENT_BOTTLE = registerBlock("bioluminescent_bottle",
             BioluminescentBottleBlock::new,AbstractBlock.Settings.copy(Blocks.GLASS).sounds(BlockSoundGroup.GLASS).luminance(state -> 15));
@@ -275,9 +277,34 @@ public class ModBlocks {
             SpiceBarrelBlock::new,AbstractBlock.Settings.copy(Blocks.OAK_PLANKS));
 
 
-    public static final Block GUANO_PILE = registerBlock("guano_block",
+    public static final Block GUANO_PILE = registerBlock("guano_pile",
             CarpetBlock::new,AbstractBlock.Settings.copy(Blocks.MOSS_CARPET).nonOpaque()
-                    .noCollision().sounds(BlockSoundGroup.HONEY).velocityMultiplier(0.75f));
+                    .noCollision().sounds(BlockSoundGroup.HONEY));
+
+    public static final Block GUANO_BLOCK = registerBlock("guano_block",
+            Block::new,AbstractBlock.Settings.copy(Blocks.MOSS_BLOCK)
+                    .sounds(BlockSoundGroup.HONEY));
+
+    public static final Block PACKED_GUANO = registerBlock("packed_guano",
+            Block::new,AbstractBlock.Settings.copy(Blocks.PACKED_MUD)
+                    .sounds(BlockSoundGroup.PACKED_MUD));
+    public static final Block GUANO_BRICKS = registerBlock("guano_bricks",
+            Block::new,AbstractBlock.Settings.copy(Blocks.PACKED_MUD)
+                    .sounds(BlockSoundGroup.PACKED_MUD));
+
+    public static final BlockFamily GUANO_FAMILY = BlockFamilies.register(ModBlocks.GUANO_BRICKS)
+            .group("guano_group").build();
+
+    public static final Block GUANO_BRICK_STAIRS = registerBlock("guano_brick_stairs",
+            settings -> new StairsBlock(ModBlocks.GUANO_BRICKS.getDefaultState(), settings),AbstractBlock.Settings.copy(Blocks.STONE_BRICK_STAIRS).requiresTool());
+
+    public static final Block GUANO_BRICK_SLAB = registerBlock("guano_brick_slab",
+            SlabBlock::new,AbstractBlock.Settings.copy(Blocks.STONE_BRICK_SLAB).requiresTool());
+
+    public static final Block GUANO_BRICK_WALL= registerBlock("guano_brick_wall",
+            WallBlock::new,AbstractBlock.Settings.copy(Blocks.STONE_BRICK_WALL).requiresTool());
+
+
 
     public static final Block SLIME_DRIP = registerBlock("slime_drip",
             SlimeHangingDripBlock::new,AbstractBlock.Settings.copy(Blocks.HANGING_ROOTS).nonOpaque()
@@ -329,6 +356,23 @@ public class ModBlocks {
                     .strength(0.2F)
                     .ticksRandomly()
                     .sounds(BlockSoundGroup.GRASS)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::canSpawnOnLeaves)
+                    .suffocates(Blocks::never)
+                    .blockVision(Blocks::never)
+                    .burnable()
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .solidBlock(Blocks::never)
+    );
+
+    public static final Block SNOWY_LEAVES = registerBlock(
+            "snowy_leaves",
+            settings -> new ParticleLeavesBlock(50, JaizMod.SNOW_PARTICLE, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.OFF_WHITE)
+                    .strength(0.2F)
+                    .ticksRandomly()
+                    .sounds(BlockSoundGroup.SNOW)
                     .nonOpaque()
                     .allowsSpawning(Blocks::canSpawnOnLeaves)
                     .suffocates(Blocks::never)

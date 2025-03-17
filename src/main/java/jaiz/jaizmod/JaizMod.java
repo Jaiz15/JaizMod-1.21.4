@@ -52,6 +52,7 @@ public class JaizMod implements ModInitializer {
 	public static final SimpleParticleType FIREFLY_PARTICLE = FabricParticleTypes.simple();
 	public static final SimpleParticleType SPROUT_PARTICLE = FabricParticleTypes.simple();
 	public static final SimpleParticleType BLOOMING_IVY_PARTICLE = FabricParticleTypes.simple();
+	public static final SimpleParticleType SNOW_PARTICLE = FabricParticleTypes.simple();
 
 
 	@Override
@@ -242,6 +243,7 @@ public class JaizMod implements ModInitializer {
 		Registry.register(Registries.PARTICLE_TYPE, Identifier.of(JaizMod.MOD_ID, "dead_leaf_particle"), DEAD_LEAF_PARTICLE);
 		Registry.register(Registries.PARTICLE_TYPE, Identifier.of(JaizMod.MOD_ID, "firefly_particle"), FIREFLY_PARTICLE);
 		Registry.register(Registries.PARTICLE_TYPE, Identifier.of(JaizMod.MOD_ID, "blooming_ivy_particle"), BLOOMING_IVY_PARTICLE);
+		Registry.register(Registries.PARTICLE_TYPE, Identifier.of(JaizMod.MOD_ID, "snow_particle"), SNOW_PARTICLE);
 
 		FabricDefaultAttributeRegistry.register(ModEntities.CATERPILLAR, CaterpillarEntity.createAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.SNAIL, SnailEntity.createSnailAttributes());

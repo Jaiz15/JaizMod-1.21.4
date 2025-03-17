@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "R": "minecraft:ice"
+  },
+  "pattern": [
+    "RR"
+  ],
+  "result": {
+    "count": 4,
+    "id": "jaizmod:frost"
+  }
+}

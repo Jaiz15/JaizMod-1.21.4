@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_guano": {
+      "conditions": {
+        "items": [
+          {
+            "items": "jaizmod:guano"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "jaizmod:guano_pile"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_guano"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "jaizmod:guano_pile"
+    ]
+  }
+}

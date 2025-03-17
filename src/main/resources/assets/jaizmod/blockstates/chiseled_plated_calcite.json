@@ -1,29 +1,109 @@
 {
   "variants": {
-    "facing=down": {
-      "model": "jaizmod:block/chiseled_plated_calcite_block",
-      "x": 180
-    },
-    "facing=east": {
-      "model": "jaizmod:block/chiseled_plated_calcite_block",
+    "orientation=down_east": {
+      "model": "jaizmod:block/chiseled_plated_calcite",
       "x": 90,
       "y": 90
     },
-    "facing=north": {
-      "model": "jaizmod:block/chiseled_plated_calcite_block",
+    "orientation=down_north": {
+      "model": "jaizmod:block/chiseled_plated_calcite",
       "x": 90
     },
-    "facing=south": {
-      "model": "jaizmod:block/chiseled_plated_calcite_block",
+    "orientation=down_south": {
+      "model": "jaizmod:block/chiseled_plated_calcite",
       "x": 90,
       "y": 180
     },
-    "facing=up": {
-      "model": "jaizmod:block/chiseled_plated_calcite_block"
-    },
-    "facing=west": {
-      "model": "jaizmod:block/chiseled_plated_calcite_block",
+    "orientation=down_west": {
+      "model": "jaizmod:block/chiseled_plated_calcite",
       "x": 90,
+      "y": 270
+    },
+    "orientation=east_up": {
+      "model": "jaizmod:block/chiseled_plated_calcite",
+      "y": 90
+    },
+    "orientation=north_up": {
+      "model": "jaizmod:block/chiseled_plated_calcite"
+    },
+    "orientation=south_up": {
+      "model": "jaizmod:block/chiseled_plated_calcite",
+      "y": 180
+    },
+    "orientation=up_east": {
+      "model": "jaizmod:block/chiseled_plated_calcite",
+      "x": 270,
+      "y": 270
+    },
+    "orientation=up_north": {
+      "model": "jaizmod:block/chiseled_plated_calcite",
+      "x": 270,
+      "y": 180
+    },
+    "orientation=up_south": {
+      "model": "jaizmod:block/chiseled_plated_calcite",
+      "x": 270
+    },
+    "orientation=up_west": {
+      "model": "jaizmod:block/chiseled_plated_calcite",
+      "x": 270,
+      "y": 90
+    },
+    "orientation=west_up": {
+      "model": "jaizmod:block/chiseled_plated_calcite",
+      "y": 270
+    },
+    "crafting=true,orientation=down_east": {
+      "model": "jaizmod:block/chiseled_plated_calcite",
+      "x": 90,
+      "y": 90
+    },
+    "crafting=true,orientation=down_north": {
+      "model": "jaizmod:block/chiseled_plated_calcite",
+      "x": 90
+    },
+    "crafting=true,orientation=down_south": {
+      "model": "jaizmod:block/chiseled_plated_calcite",
+      "x": 90,
+      "y": 180
+    },
+    "crafting=true,orientation=down_west": {
+      "model": "jaizmod:block/chiseled_plated_calcite",
+      "x": 90,
+      "y": 270
+    },
+    "crafting=true,orientation=east_up": {
+      "model": "jaizmod:block/chiseled_plated_calcite",
+      "y": 90
+    },
+    "crafting=true,orientation=north_up": {
+      "model": "jaizmod:block/chiseled_plated_calcite"
+    },
+    "crafting=true,orientation=south_up": {
+      "model": "jaizmod:block/chiseled_plated_calcite",
+      "y": 180
+    },
+    "crafting=true,orientation=up_east": {
+      "model": "jaizmod:block/chiseled_plated_calcite",
+      "x": 270,
+      "y": 270
+    },
+    "crafting=true,orientation=up_north": {
+      "model": "jaizmod:block/chiseled_plated_calcite",
+      "x": 270,
+      "y": 180
+    },
+    "crafting=true,orientation=up_south": {
+      "model": "jaizmod:block/chiseled_plated_calcite",
+      "x": 270
+    },
+    "crafting=true,orientation=up_west": {
+      "model": "jaizmod:block/chiseled_plated_calcite",
+      "x": 270,
+      "y": 90
+    },
+    "crafting=true,orientation=west_up": {
+      "model": "jaizmod:block/chiseled_plated_calcite",
       "y": 270
     }
   }

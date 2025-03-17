@@ -1,16 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "minecraft:item/template_spawn_egg",
-    "tints": [
-      {
-        "type": "minecraft:constant",
-        "value": -12574441
-      },
-      {
-        "type": "minecraft:constant",
-        "value": -6249605
-      }
-    ]
+    "model": "jaizmod:item/snail_spawn_egg"
   }
 }

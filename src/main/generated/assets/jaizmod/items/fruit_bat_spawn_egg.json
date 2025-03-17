@@ -1,16 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "minecraft:item/template_spawn_egg",
-    "tints": [
-      {
-        "type": "minecraft:constant",
-        "value": -12113648
-      },
-      {
-        "type": "minecraft:constant",
-        "value": -1918056
-      }
-    ]
+    "model": "jaizmod:item/fruit_bat_spawn_egg"
   }
 }

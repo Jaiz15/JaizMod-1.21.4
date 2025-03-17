@@ -18,6 +18,9 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.random.Random;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.Objects;
 
@@ -43,8 +46,8 @@ public abstract class SnifferEggMixin extends Block {
         super(settings);
     }
 
-    @Override
-    public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+    @Inject(at = @At("HEAD"), method = "scheduledTick", cancellable = true)
+    public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random, CallbackInfo ci) {
         if (!this.isReadyToHatch(state)) {
             world.playSound(null, pos, SoundEvents.BLOCK_SNIFFER_EGG_CRACK, SoundCategory.BLOCKS, 0.7F, 0.9F + random.nextFloat() * 0.2F);
             world.setBlockState(pos, state.with(HATCH, Integer.valueOf(this.getHatchStage(state) + 1)), Block.NOTIFY_LISTENERS);
@@ -53,5 +56,6 @@ public abstract class SnifferEggMixin extends Block {
             world.breakBlock(pos, false);
             Objects.requireNonNull(EntityType.SNIFFER.spawn(world, pos, SpawnReason.BREEDING)).setBaby(true);
         }
+        ci.cancel();
     }
 }
